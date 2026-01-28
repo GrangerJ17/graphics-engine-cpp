@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/render.dir/render.cpp.o -o render  -lSDL3_ttf -lSDL3
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/render.dir/render.cpp.o -o render   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -lSDL3_ttf -lSDL3

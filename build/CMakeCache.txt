@@ -45,6 +45,24 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
+//C compiler
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+//Flags used by the C compiler during all build types.
+CMAKE_C_FLAGS:STRING=
+
+//Flags used by the C compiler during DEBUG builds.
+CMAKE_C_FLAGS_DEBUG:STRING=-g
+
+//Flags used by the C compiler during MINSIZEREL builds.
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+
+//Flags used by the C compiler during RELEASE builds.
+CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+
+//Flags used by the C compiler during RELWITHDEBINFO builds.
+CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
@@ -128,7 +146,22 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=software_render
+CMAKE_PROJECT_NAME:STATIC=cppgraphics
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION:STATIC=0.1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_MINOR:STATIC=1
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_PATCH:STATIC=
+
+//Value Computed by CMake
+CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -201,20 +234,20 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
 
+//Value Computed by CMake
+cppgraphics_BINARY_DIR:STATIC=/Users/jamesgranger/cppgraphics/build
+
+//Value Computed by CMake
+cppgraphics_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cppgraphics_SOURCE_DIR:STATIC=/Users/jamesgranger/cppgraphics
+
 //Path to a library.
-pkgcfg_lib_SDL_SDL3:FILEPATH=/usr/local/lib/libSDL3.dylib
+pkgcfg_lib_SDL3_SDL3:FILEPATH=/usr/local/lib/libSDL3.dylib
 
 //Path to a library.
-pkgcfg_lib_SDL_SDL3_ttf:FILEPATH=/usr/local/lib/libSDL3_ttf.dylib
-
-//Value Computed by CMake
-software_render_BINARY_DIR:STATIC=/Users/jamesgranger/cppgraphics/build
-
-//Value Computed by CMake
-software_render_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-software_render_SOURCE_DIR:STATIC=/Users/jamesgranger/cppgraphics
+pkgcfg_lib_SDL3_SDL3_ttf:FILEPATH=/usr/local/lib/libSDL3_ttf.dylib
 
 
 ########################
@@ -253,6 +286,18 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS
+CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
+CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
+CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
+CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
+CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
@@ -356,52 +401,52 @@ FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v2.5
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-SDL_CFLAGS:INTERNAL=-I/usr/local/include;-I/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;-I/usr/local/Cellar/glib/2.84.3/include/glib-2.0;-I/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre2/10.45/include;-I/usr/local/Cellar/graphite2/1.3.14/include;-I/usr/local/opt/freetype/include/freetype2;-I/usr/local/opt/libpng/include/libpng16
-SDL_CFLAGS_I:INTERNAL=
-SDL_CFLAGS_OTHER:INTERNAL=
-SDL_FOUND:INTERNAL=1
-SDL_INCLUDEDIR:INTERNAL=
-SDL_INCLUDE_DIRS:INTERNAL=/usr/local/include;/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;/usr/local/Cellar/glib/2.84.3/include/glib-2.0;/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre2/10.45/include;/usr/local/Cellar/graphite2/1.3.14/include;/usr/local/opt/freetype/include/freetype2;/usr/local/opt/libpng/include/libpng16
-SDL_LDFLAGS:INTERNAL=-L/usr/local/lib;-lSDL3_ttf;-Wl,-rpath,/usr/local/lib;-lSDL3
-SDL_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/usr/local/lib
-SDL_LIBDIR:INTERNAL=
-SDL_LIBRARIES:INTERNAL=SDL3_ttf;SDL3
-SDL_LIBRARY_DIRS:INTERNAL=/usr/local/lib
-SDL_LIBS:INTERNAL=
-SDL_LIBS_L:INTERNAL=
-SDL_LIBS_OTHER:INTERNAL=
-SDL_LIBS_PATHS:INTERNAL=
-SDL_MODULE_NAME:INTERNAL=
-SDL_PREFIX:INTERNAL=
-SDL_STATIC_CFLAGS:INTERNAL=-I/usr/local/include;-I/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;-I/usr/local/Cellar/glib/2.84.3/include/glib-2.0;-I/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre2/10.45/include;-I/usr/local/Cellar/graphite2/1.3.14/include;-I/usr/local/opt/freetype/include/freetype2;-I/usr/local/opt/libpng/include/libpng16
-SDL_STATIC_CFLAGS_I:INTERNAL=
-SDL_STATIC_CFLAGS_OTHER:INTERNAL=
-SDL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/include;/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;/usr/local/Cellar/glib/2.84.3/include/glib-2.0;/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre2/10.45/include;/usr/local/Cellar/graphite2/1.3.14/include;/usr/local/opt/freetype/include/freetype2;/usr/local/opt/libpng/include/libpng16
-SDL_STATIC_LDFLAGS:INTERNAL=-L/usr/local/lib;-lSDL3_ttf;-Wl,-rpath,/usr/local/lib;-lSDL3;-Wl,-framework,CoreMedia;-Wl,-framework,CoreVideo;-Wl,-framework,Cocoa;-Wl,-weak_framework,UniformTypeIdentifiers;-Wl,-framework,IOKit;-Wl,-framework,ForceFeedback;-Wl,-framework,Carbon;-Wl,-framework,CoreAudio;-Wl,-framework,AudioToolbox;-Wl,-framework,AVFoundation;-Wl,-framework,Foundation;-Wl,-framework,GameController;-Wl,-framework,Metal;-Wl,-framework,QuartzCore;-Wl,-weak_framework,CoreHaptics;-lpthread;-lm;-L/usr/local/Cellar/harfbuzz/11.3.3/lib;-lharfbuzz;-lm;-framework;ApplicationServices;-L/usr/local/Cellar/glib/2.84.3/lib;-lglib-2.0;-L/usr/local/opt/gettext/lib;-lintl;-liconv;-lm;-framework;Foundation;-framework;CoreFoundation;-framework;AppKit;-framework;Carbon;-L/usr/local/Cellar/pcre2/10.45/lib;-lpcre2-8;-D_THREAD_SAFE;-pthread;-L/usr/local/Cellar/graphite2/1.3.14/lib;-lgraphite2;-L/usr/local/opt/freetype/lib;-lfreetype;-lbz2;-L/usr/local/opt/libpng/lib;-lpng16;-L/usr/lib;-lz
-SDL_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/usr/local/lib;-Wl,-framework,CoreMedia;-Wl,-framework,CoreVideo;-Wl,-framework,Cocoa;-Wl,-weak_framework,UniformTypeIdentifiers;-Wl,-framework,IOKit;-Wl,-framework,ForceFeedback;-Wl,-framework,Carbon;-Wl,-framework,CoreAudio;-Wl,-framework,AudioToolbox;-Wl,-framework,AVFoundation;-Wl,-framework,Foundation;-Wl,-framework,GameController;-Wl,-framework,Metal;-Wl,-framework,QuartzCore;-Wl,-weak_framework,CoreHaptics;-framework;ApplicationServices;-framework;Foundation;-framework;CoreFoundation;-framework;AppKit;-framework;Carbon;-D_THREAD_SAFE;-pthread
-SDL_STATIC_LIBDIR:INTERNAL=
-SDL_STATIC_LIBRARIES:INTERNAL=SDL3_ttf;SDL3;pthread;m;harfbuzz;m;glib-2.0;intl;iconv;m;pcre2-8;graphite2;freetype;bz2;png16;z
-SDL_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/lib;/usr/local/Cellar/harfbuzz/11.3.3/lib;/usr/local/Cellar/glib/2.84.3/lib;/usr/local/opt/gettext/lib;/usr/local/Cellar/pcre2/10.45/lib;/usr/local/Cellar/graphite2/1.3.14/lib;/usr/local/opt/freetype/lib;/usr/local/opt/libpng/lib;/usr/lib
-SDL_STATIC_LIBS:INTERNAL=
-SDL_STATIC_LIBS_L:INTERNAL=
-SDL_STATIC_LIBS_OTHER:INTERNAL=
-SDL_STATIC_LIBS_PATHS:INTERNAL=
-SDL_VERSION:INTERNAL=
-SDL_sdl3-ttf_INCLUDEDIR:INTERNAL=/usr/local/include
-SDL_sdl3-ttf_LIBDIR:INTERNAL=/usr/local/lib
-SDL_sdl3-ttf_MODULE_NAME:INTERNAL=sdl3-ttf
-SDL_sdl3-ttf_PREFIX:INTERNAL=/usr/local
-SDL_sdl3-ttf_VERSION:INTERNAL=3.3.0
-SDL_sdl3_INCLUDEDIR:INTERNAL=/usr/local/include
-SDL_sdl3_LIBDIR:INTERNAL=/usr/local/lib
-SDL_sdl3_MODULE_NAME:INTERNAL=sdl3
-SDL_sdl3_PREFIX:INTERNAL=/usr/local
-SDL_sdl3_VERSION:INTERNAL=3.4.0
-__pkg_config_arguments_SDL:INTERNAL=REQUIRED;sdl3;sdl3-ttf
-__pkg_config_checked_SDL:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_SDL_SDL3
-pkgcfg_lib_SDL_SDL3-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_SDL_SDL3_ttf
-pkgcfg_lib_SDL_SDL3_ttf-ADVANCED:INTERNAL=1
+SDL3_CFLAGS:INTERNAL=-I/usr/local/include;-I/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;-I/usr/local/Cellar/glib/2.84.3/include/glib-2.0;-I/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre2/10.45/include;-I/usr/local/Cellar/graphite2/1.3.14/include;-I/usr/local/opt/freetype/include/freetype2;-I/usr/local/opt/libpng/include/libpng16
+SDL3_CFLAGS_I:INTERNAL=
+SDL3_CFLAGS_OTHER:INTERNAL=
+SDL3_FOUND:INTERNAL=1
+SDL3_INCLUDEDIR:INTERNAL=
+SDL3_INCLUDE_DIRS:INTERNAL=/usr/local/include;/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;/usr/local/Cellar/glib/2.84.3/include/glib-2.0;/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre2/10.45/include;/usr/local/Cellar/graphite2/1.3.14/include;/usr/local/opt/freetype/include/freetype2;/usr/local/opt/libpng/include/libpng16
+SDL3_LDFLAGS:INTERNAL=-L/usr/local/lib;-lSDL3_ttf;-Wl,-rpath,/usr/local/lib;-lSDL3
+SDL3_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/usr/local/lib
+SDL3_LIBDIR:INTERNAL=
+SDL3_LIBRARIES:INTERNAL=SDL3_ttf;SDL3
+SDL3_LIBRARY_DIRS:INTERNAL=/usr/local/lib
+SDL3_LIBS:INTERNAL=
+SDL3_LIBS_L:INTERNAL=
+SDL3_LIBS_OTHER:INTERNAL=
+SDL3_LIBS_PATHS:INTERNAL=
+SDL3_MODULE_NAME:INTERNAL=
+SDL3_PREFIX:INTERNAL=
+SDL3_STATIC_CFLAGS:INTERNAL=-I/usr/local/include;-I/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;-I/usr/local/Cellar/glib/2.84.3/include/glib-2.0;-I/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;-I/usr/local/opt/gettext/include;-I/usr/local/Cellar/pcre2/10.45/include;-I/usr/local/Cellar/graphite2/1.3.14/include;-I/usr/local/opt/freetype/include/freetype2;-I/usr/local/opt/libpng/include/libpng16
+SDL3_STATIC_CFLAGS_I:INTERNAL=
+SDL3_STATIC_CFLAGS_OTHER:INTERNAL=
+SDL3_STATIC_INCLUDE_DIRS:INTERNAL=/usr/local/include;/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz;/usr/local/Cellar/glib/2.84.3/include/glib-2.0;/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include;/usr/local/opt/gettext/include;/usr/local/Cellar/pcre2/10.45/include;/usr/local/Cellar/graphite2/1.3.14/include;/usr/local/opt/freetype/include/freetype2;/usr/local/opt/libpng/include/libpng16
+SDL3_STATIC_LDFLAGS:INTERNAL=-L/usr/local/lib;-lSDL3_ttf;-Wl,-rpath,/usr/local/lib;-lSDL3;-Wl,-framework,CoreMedia;-Wl,-framework,CoreVideo;-Wl,-framework,Cocoa;-Wl,-weak_framework,UniformTypeIdentifiers;-Wl,-framework,IOKit;-Wl,-framework,ForceFeedback;-Wl,-framework,Carbon;-Wl,-framework,CoreAudio;-Wl,-framework,AudioToolbox;-Wl,-framework,AVFoundation;-Wl,-framework,Foundation;-Wl,-framework,GameController;-Wl,-framework,Metal;-Wl,-framework,QuartzCore;-Wl,-weak_framework,CoreHaptics;-lpthread;-lm;-L/usr/local/Cellar/harfbuzz/11.3.3/lib;-lharfbuzz;-lm;-framework;ApplicationServices;-L/usr/local/Cellar/glib/2.84.3/lib;-lglib-2.0;-L/usr/local/opt/gettext/lib;-lintl;-liconv;-lm;-framework;Foundation;-framework;CoreFoundation;-framework;AppKit;-framework;Carbon;-L/usr/local/Cellar/pcre2/10.45/lib;-lpcre2-8;-D_THREAD_SAFE;-pthread;-L/usr/local/Cellar/graphite2/1.3.14/lib;-lgraphite2;-L/usr/local/opt/freetype/lib;-lfreetype;-lbz2;-L/usr/local/opt/libpng/lib;-lpng16;-L/usr/lib;-lz
+SDL3_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/usr/local/lib;-Wl,-framework,CoreMedia;-Wl,-framework,CoreVideo;-Wl,-framework,Cocoa;-Wl,-weak_framework,UniformTypeIdentifiers;-Wl,-framework,IOKit;-Wl,-framework,ForceFeedback;-Wl,-framework,Carbon;-Wl,-framework,CoreAudio;-Wl,-framework,AudioToolbox;-Wl,-framework,AVFoundation;-Wl,-framework,Foundation;-Wl,-framework,GameController;-Wl,-framework,Metal;-Wl,-framework,QuartzCore;-Wl,-weak_framework,CoreHaptics;-framework;ApplicationServices;-framework;Foundation;-framework;CoreFoundation;-framework;AppKit;-framework;Carbon;-D_THREAD_SAFE;-pthread
+SDL3_STATIC_LIBDIR:INTERNAL=
+SDL3_STATIC_LIBRARIES:INTERNAL=SDL3_ttf;SDL3;pthread;m;harfbuzz;m;glib-2.0;intl;iconv;m;pcre2-8;graphite2;freetype;bz2;png16;z
+SDL3_STATIC_LIBRARY_DIRS:INTERNAL=/usr/local/lib;/usr/local/Cellar/harfbuzz/11.3.3/lib;/usr/local/Cellar/glib/2.84.3/lib;/usr/local/opt/gettext/lib;/usr/local/Cellar/pcre2/10.45/lib;/usr/local/Cellar/graphite2/1.3.14/lib;/usr/local/opt/freetype/lib;/usr/local/opt/libpng/lib;/usr/lib
+SDL3_STATIC_LIBS:INTERNAL=
+SDL3_STATIC_LIBS_L:INTERNAL=
+SDL3_STATIC_LIBS_OTHER:INTERNAL=
+SDL3_STATIC_LIBS_PATHS:INTERNAL=
+SDL3_VERSION:INTERNAL=
+SDL3_sdl3-ttf_INCLUDEDIR:INTERNAL=/usr/local/include
+SDL3_sdl3-ttf_LIBDIR:INTERNAL=/usr/local/lib
+SDL3_sdl3-ttf_MODULE_NAME:INTERNAL=sdl3-ttf
+SDL3_sdl3-ttf_PREFIX:INTERNAL=/usr/local
+SDL3_sdl3-ttf_VERSION:INTERNAL=3.3.0
+SDL3_sdl3_INCLUDEDIR:INTERNAL=/usr/local/include
+SDL3_sdl3_LIBDIR:INTERNAL=/usr/local/lib
+SDL3_sdl3_MODULE_NAME:INTERNAL=sdl3
+SDL3_sdl3_PREFIX:INTERNAL=/usr/local
+SDL3_sdl3_VERSION:INTERNAL=3.4.0
+__pkg_config_arguments_SDL3:INTERNAL=REQUIRED;sdl3;sdl3-ttf
+__pkg_config_checked_SDL3:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_SDL3_SDL3
+pkgcfg_lib_SDL3_SDL3-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_SDL3_SDL3_ttf
+pkgcfg_lib_SDL3_SDL3_ttf-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/local/lib
 

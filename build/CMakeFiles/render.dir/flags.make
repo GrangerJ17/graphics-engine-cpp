@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/usr/local/Cellar/harfbuzz/11.3.3/include/harfbuzz -I/usr/local/Cellar/glib/2.84.3/include/glib-2.0 -I/usr/local/Cellar/glib/2.84.3/lib/glib-2.0/include -I/usr/local/opt/gettext/include -I/usr/local/Cellar/pcre2/10.45/include -I/usr/local/Cellar/graphite2/1.3.14/include -I/usr/local/opt/freetype/include/freetype2 -I/usr/local/opt/libpng/include/libpng16
 
-CXX_FLAGS = 
+CXX_FLAGS = -std=gnu++20
 

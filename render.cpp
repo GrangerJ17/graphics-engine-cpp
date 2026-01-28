@@ -8,8 +8,8 @@
 #include <cmath>
 using namespace std;
 
-#define HEIGHT 800
-#define WIDTH 800
+#define HEIGHT 900
+#define WIDTH 900
 #define FPS 60.0f
 #define _USE_MATH_DEFINE
 
@@ -32,7 +32,7 @@ float sensitivity = 0.01f;
 
 float rot_speed = 1.0f;
 float move_speed = 4.0f;
-float focal = 1.5f;
+float focal = 2.0f;
 
 bool change = false;
 
@@ -142,7 +142,7 @@ void render_screen(){
 
 int main() {
     SDL_Init(SDL_INIT_VIDEO);
-    TTF_Init();
+    
 
     SDL_CreateWindowAndRenderer("CPU Surface", HEIGHT, WIDTH, 0, &window, &renderer);
 
@@ -217,22 +217,9 @@ int main() {
             
             
         }
-
-        if (event.type == SDL_EVENT_MOUSE_BUTTON_DOWN) {
-        if (event.button.button == SDL_BUTTON_LEFT) {
-            cam_move = 1;
-            last_mouse_x = event.button.x;
-        }
-    }
-        
-        if (event.type == SDL_EVENT_MOUSE_BUTTON_UP) {
-            if (event.button.button == SDL_BUTTON_LEFT) {
-                cam_move = 0;
-            }
-        } 
         
         if (event.type == SDL_EVENT_MOUSE_MOTION) {
-            if (cam_move) {
+            
                float rot_direction = event.button.x - last_mouse_x;
                std::cout << "Rotation direction: " << rot_direction << std::endl;
                if(rot_direction > 0){
@@ -255,7 +242,7 @@ int main() {
                         dz = ((old_dx*-s)+(old_dz*c));
 
                }
-            }
+            
 
             last_mouse_x = event.button.x;
          
